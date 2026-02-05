@@ -1,0 +1,4 @@
+-For create expo app:
+npx create-expo-app@latest StickerSmash
+
+-About test 1:
