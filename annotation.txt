@@ -1,4 +1,15 @@
 -For create expo app:
-npx create-expo-app@latest StickerSmash
+npx create-expo-app StickerSmash
 
 -About test 1:
+O Teste 1 é focado em Consumo de Dados (GET) e Performance de Listagem.
+Em resumo, os pilares que cobrimos foram:
+*Consumo de API (Leitura): Buscamos dados de uma API externa (jsonplaceholder) usando fetch dentro do useEffect.
+*Performance com FlatList: Como renderizar grandes volumes de dados de forma eficiente em dispositivos móveis.
+*Otimização com Hooks:
+    useMemo: Para filtrar a lista de usuários em tempo real sem reprocessar os dados desnecessariamente a cada clique/digitação.
+    useCallback: (Mencionamos a importância para funções passadas para componentes filhos).
+*TypeScript: Tipagem de interfaces para os dados que chegam da API (o objeto User).
+*Tratamento de Estados: Gerenciamento de estados de loading (carregamento), error (falha na API) e data (dados prontos).
+*Testes Unitários: Configuração do ambiente com Jest e Testing Library, e como mockar o fetch para testar a interface sem depender da internet.
+Em uma frase: O Teste 1 validou sua capacidade de exibir dados complexos de forma rápida e segura (típico de telas de consulta em ERPs).

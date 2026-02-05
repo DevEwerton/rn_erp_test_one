@@ -45,15 +45,15 @@ export default function HomeScreen ()
 			.fill(null)
 			.map((_, i) => {
 				return data.map((u, j) => {
-				return {
-					...u,
-					id: u.id + (i * data.length),
-				}
+					return {
+						...u,
+						id: u.id + (i * data.length), //@overwrite id to be unique
+					}
 				});
 			})
 			.flat();
 
-			await setCustomTimeout(5);
+			await setCustomTimeout(5); //simulating a delay...
 			
 			setUsers(dataLong);
 		})
@@ -65,7 +65,7 @@ export default function HomeScreen ()
 		})
 	}
 
-	const usersFiltered = useMemo(() =>
+	const usersFiltered = useMemo(() => //useMemo is a hook by performance optimization
 	{
 		if (search.trim() === "") { return users; }
 

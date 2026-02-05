@@ -1,32 +1,19 @@
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import { StyleSheet, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function TabTwoScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
-        <Text style={styles.title}>Explorer</Text>
-    </ParallaxScrollView>
-  );
+export default function ExploreScreen ()
+{
+	return (
+		<SafeAreaView style={styles.container}>
+			<Text>Hello explore</Text>
+		</SafeAreaView>
+	);
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  title: {
-    color: '#fff'
-  },
+	container: {
+		flex: 1,
+		backgroundColor: '#949494',
+		padding: 10,
+	}
 });
